@@ -6,12 +6,14 @@ import subprocess
 import time
 import speech_recognition as sr
 
+# setting API key
 openai.api_key = os.environ["SECRET_KEY"]
 os.environ["DISPLAY"] = ":0"
 identifier = ""
 
-subprocess.Popen(f"feh -F output/title.png &", shell=True)
+subprocess.Popen(f"feh -F title.png &", shell=True)
 
+# waiting for wake word
 def wake_word_detection():
     global identifier
     try:
@@ -28,6 +30,8 @@ def wake_word_detection():
             try:
                 text = r.recognize_google(audio).lower()
                 print("Recognized Text:", text)
+                
+                # the default wake word and 3 example artist wake words 
                 if "picture frame" in text.lower():
                     return "Pie"
                 if "picasso" in text.lower():
@@ -48,12 +52,13 @@ def wake_word_detection():
         print(f"Error: {e}")
         return ""
 
+# listening for prompt
 def record_audio():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         print("Speak your prompt...")
         try:
-            subprocess.Popen(f"feh -F output/speak.png &", shell=True)
+            subprocess.Popen(f"feh -F speak.png &", shell=True)
             audio = recognizer.listen(source, timeout=5)
             return recognizer.recognize_google(audio)
         except (sr.UnknownValueError, sr.RequestError) as e:
@@ -63,8 +68,9 @@ def record_audio():
 while True:
     wake_word_detection()
     PROMPT = record_audio()
-    subprocess.Popen(f"feh -F output/generating.png &", shell=True)
+    subprocess.Popen(f"feh -F generating.png &", shell=True)
 
+    # image generation
     if PROMPT:
         response = openai.Image.create(
             prompt= identifier + PROMPT,
@@ -76,11 +82,13 @@ while True:
         url = response["data"][0]["url"]
         data = requests.get(url).content
 
+        # naming created image
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
         file_name = f'output/img{timestamp}.png'
         with open(file_name, 'wb') as f:
             f.write(data)
 
+        # opening image
         print(f"Image saved as {file_name}")
         subprocess.Popen(f"feh -F {file_name} &", shell=True)
         time.sleep(2)
