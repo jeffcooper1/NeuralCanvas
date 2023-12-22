@@ -15,10 +15,30 @@ and waits for another wake word.
 
 ![IMG-8946](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/4cc8ff28-1a05-4844-836c-6311812d476b)
 
-### [Video Demonstration](https://www.youtube.com/watch?v=0DIzFwDBfL4)
+### Walkthrough
+1. Program is executed. Waiting for user to speak a wake word.
+
+![title](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/334f6eb1-ae22-41ae-9388-c354d14ea7d7)
+
+2. Wake word detected. User is instructed to provide a prompt.
+
+![speak](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/e66f1751-c38c-40af-a847-fb9f59890140)
+
+3. User finished speaking their prompt. Image is being generated.
+
+![generating](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/4bbdae7b-ad3a-432e-a1b8-75a01dcb73ba)
+
+4. Image is displayed. Image will stay displayed until prompted with another wake word.
+
+![image_6483441](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/69c1175c-ff9f-4ed4-aaf4-59a2938a77d0)
+
+(Prompt Given: CCTV fisheye footage of a giant realistic eagle on a green truck taking money from a man at a gas station)
+
+___________________________________________________________________
+# [Video Demonstration](https://www.youtube.com/watch?v=0DIzFwDBfL4)
 
 
-## Contributers
+## Contributors
 Jeff Cooper, Ian Cox, Chase Melisky
 
 ## Class
