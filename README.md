@@ -1,3 +1,3 @@
 # NeuralCanvas
 AI Art Picture Frame
-![nc](NeuralCanvas/generating.png)
+![IMG-8947 (1)](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/7a9beb9e-e645-4405-919f-4a6371f3832f)
