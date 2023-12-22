@@ -13,8 +13,10 @@ Neural Canvas uses the SpeechRecognition Python library for both the wake word a
 generation, the spoken prompt is fed into OpenAI’s API to utilize DALL-E 3’s image generation capabilities. Feh image viewer is used to take the saved images and open them for display on the screen. After the image is displayed, the program loops back 
 and waits for another wake word.
 
-![IMG-8947 (1)](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/7a9beb9e-e645-4405-919f-4a6371f3832f)
-![IMG-8946](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/25a8f686-caf6-4fc1-bea5-3d3cb46f34d1)
+![IMG-8946](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/4cc8ff28-1a05-4844-836c-6311812d476b)
+
+### Video Demonstration
+
 
 ## Contributers
 Jeff Cooper, Ian Cox, Chase Melisky
