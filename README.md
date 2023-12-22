@@ -15,7 +15,7 @@ and waits for another wake word.
 
 ![IMG-8946](https://github.com/jeffcooper1/NeuralCanvas/assets/111708974/4cc8ff28-1a05-4844-836c-6311812d476b)
 
-### Video Demonstration
+### [Video Demonstration](https://www.youtube.com/watch?v=0DIzFwDBfL4)
 
 
 ## Contributers
